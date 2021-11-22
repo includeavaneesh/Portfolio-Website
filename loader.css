@@ -1,19 +1,23 @@
-#loading {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    text-align: center;
-    opacity: 0.7;
-    background-color: #fff;
-    z-index: 99;
-  }
+#loader {
+    border: 12px solid #000000;
+    border-radius: 50%;
+    border-top: 12px solid #ffffff65;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
   
-  #loading-image {
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+.center {
     position: absolute;
-    top: 100px;
-    left: 240px;
-    z-index: 100;
-  }
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

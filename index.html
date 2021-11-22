@@ -11,19 +11,18 @@
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
   <link href="./assets/images/profile.jpg" rel="icon">
-  
+
   <title>Avaneesh Kanshi | Portfolio</title>
 
   <link href="./main.3f6952e4.css" rel="stylesheet">
+  <link href="./loader.css" rel="stylesheet">
+
 </head>
 
-<body class="minimal">
-  <div id="loading">
-    okay loading
-  </div>
+<body class="minimal" style="background-color: black;">
+  <div id="loader" class="center"></div>
   <div id="site-border-left"></div>
   <div id="site-border-right"></div>
   <div id="site-border-top"></div>
@@ -83,14 +82,18 @@
       // movingBackgroundImage();
     });
   </script>
-  
-
-  <script type="text/javascript" src="./main.70a66962.js"></script>
   <script>
-    $(window).on('load', function () {
-      $('#loading').hide();
-    }) 
+    document.onreadystatechange = function () {
+      if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+      } else {
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+      }
+    };
   </script>
+  <script type="text/javascript" src="./main.70a66962.js"></script>
 </body>
 
 </html>
