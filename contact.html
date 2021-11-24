@@ -64,7 +64,8 @@
 
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-              <form action="mailto:someone@example.com" class="reveal-content" method="post" enctype="text/plain">
+              <form action="mailto:avaneeshkanshi5@gmail.com.com" class="reveal-content" method="post"
+                enctype="text/plain">
                 <div class="row">
                   <div class="col-md-7">
 
@@ -78,8 +79,9 @@
                       <textarea class="form-control" rows="5" placeholder="Enter your message"></textarea>
                     </div>
                     <div class="message-alert alert alert-success" role="alert">Your message was successfully sent</div>
+                    <div class="alert alert-danger" role="alert">Incorrect message, try again!</div>
                     <input type="submit" class="submit btn btn-default btn-lg"></input>
-                    <input type="reset" value="Reset" class="reset btn btn-default btn-lg">
+                    <input type="reset" value="Reset" class="reset btn btn-default btn-lg"></input>
 
                   </div>
                   <div class="col-md-5 address-container">
@@ -151,16 +153,43 @@
 
   <script>
     $(document).ready(function () {
-      $(".message-alert").hide();
+      $(".alert-success").hide();
+      $(".alert-danger").hide();
+
       $(".submit").click(function () {
-        $(".message-alert").show();
+        var flag = 1
+
+        var x = document.forms[0].elements;
+        for (var i = 0; i < x.length - 3; i++) {
+          if (!x[i].value) {
+            flag = 0
+            // alert(x[i].type);
+          }
+        }
+
+        if (x['email'].value.indexOf('@') == -1)
+          flag = 0
+
+        if (flag == 1) {
+          $(".message-alert").show();
+          $(".alert-danger").hide();
+
+        } else {
+          $(".message-alert").hide();
+          $(".alert-danger").show();
+        }
+
       })
 
       $(".reset").click(function () {
         $(".message-alert").hide();
+        $(".alert-danger").hide();
       })
+
+
     })
   </script>
+
   <script>
     document.onreadystatechange = function () {
       if (document.readyState !== "complete") {
