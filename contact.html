@@ -79,7 +79,7 @@
                     </div>
                     <div class="message-alert alert alert-success" role="alert">Your message was successfully sent</div>
                     <input type="submit" class="submit btn btn-default btn-lg"></input>
-                    <input type="reset" value="Reset" class="btn btn-default btn-lg">
+                    <input type="reset" value="Reset" class="reset btn btn-default btn-lg">
 
                   </div>
                   <div class="col-md-5 address-container">
@@ -154,6 +154,10 @@
       $(".message-alert").hide();
       $(".submit").click(function () {
         $(".message-alert").show();
+      })
+
+      $(".reset").click(function () {
+        $(".message-alert").hide();
       })
     })
   </script>
