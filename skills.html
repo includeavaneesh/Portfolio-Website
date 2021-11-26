@@ -7,14 +7,17 @@
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <meta content="description" name="description">
     <meta name="google" content="notranslate" />
+    <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+    <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
     <link href="./assets/images/profile.jpg" rel="icon">
-    <link href="./main.3f6952e4.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+    <link href="./assets/favicon.ico" rel="icon">
     <link href="./loader.css" rel="stylesheet">
-
     <title>Avaneesh Kanshi | Works</title>
+
+    <link href="./main.3f6952e4.css" rel="stylesheet">
 </head>
 
 <body class="">
@@ -45,65 +48,76 @@
                     </ul>
 
 
-                    <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-                        <li><a href="./vulcan.html" title="">001</a></li>
-                        <li><a href="./proxy.html" title="" class="active"><b>002</b></a></li>
-                        <li><a href="./kalman.html" title="">003</a></li>
-                        <li><a href="./index.html" title="">004</a></li>
-                        <li><a href="./index.html" title="">005</a></li>
-                        <li><a href="./index.html" title="">006</a></li>
-                    </ul>
-
-
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="section-container">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 ">
-                    <div class=" black-image-project-hover">
-                        <img src="./assets/proxy/proxy3.png" class="img-responsive" alt="" class="">
+                <section class="skills container">
+                    <div class="title text-center">
+                        <h2>My skills</h2>
                     </div>
 
-                    <div class="card-container">
-                        <div class="text-center">
-                            <h1>002 : Improvised Proxy Server</h1>
-                            <br><br>
-                            <h3>Year : Currently Under Development</h3>
-                            <br><br>
+                    <div class="skill-bars">
+                        <div class="bar">
+                            <div class="info">
+                                <span>HTML</span>
+                            </div>
+                            <div class="progress-line html">
+                                <span></span>
+                            </div>
                         </div>
-
-                        <p align="center">
-                            In several business enterprises and educational institutes or even a whole country, we are
-                            sometimes unable to access few of the websites through the network. This is because the
-                            administration has only allowed access to few of the websites, mainly because to protect
-                            their
-                            network from foreign intrusion or prevent spreading of false information. Some of the
-                            websites
-                            are usually blocked unintentionally and require a proxy server in order to access it, but it
-                            can
-                            lead
-                            to accessing dangerous websites as well. In order to protect the network while being able to
-                            use proxy server, vanilla proxy server model has been modified which uses a forward and
-                            reverse proxy connections to prrocide
-                            a facility to check for malicious connections before continuing
-                            further. Modelling an end-to-end system making connections safer!
-
-                        </p>
-                        <p>
-                            <br><br>
-                            <div align="center">
-                                <h2>Architecture</h2>
+                        <div class="bar">
+                            <div class="info">
+                                <span>CSS</span>
                             </div>
-                            <br><br>
-                            <div class="col-xs-12">
-                                <img src="./assets/proxy/proxy.png" class="img-responsive" alt="">
+                            <div class="progress-line css">
+                                <span></span>
                             </div>
-
+                        </div>
+                        <div class="bar">
+                            <div class="info">
+                                <span>jQuery</span>
+                            </div>
+                            <div class="progress-line jquery">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="info">
+                                <span>Python</span>
+                            </div>
+                            <div class="progress-line python">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="info">
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="progress-line mongodb">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="info">
+                                <span>GoLang</span>
+                            </div>
+                            <div class="progress-line golang">
+                                <span></span>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                </section>
+                <!-- end of skills page -->
+
+
+
+
             </div>
         </div>
     </div>
@@ -124,6 +138,7 @@
             navActivePage();
         });
     </script>
+
     <script>
         document.onreadystatechange = function () {
             if (document.readyState !== "complete") {
